@@ -1,35 +1,22 @@
-const cloneCarSymbol = Symbol('cloneCar');
+import Car from './10-car';
 
-class Car {
-  constructor(brand, motor, color) {
-    this._brand = brand;
-    this._motor = motor;
-    this._color = color;
-
-    // Set the cloneCar method as a symbol property on the instance
-    this[cloneCarSymbol] = this.cloneCar.bind(this);
+export default class EVCar extends Car {
+  constructor(brand, motor, color, range) {
+    super(brand, motor, color);
+    this.range = range;
   }
 
-  // Getter for brand
-  get brand() {
-    return this._brand;
+  get range() {
+    return this._range;
   }
 
-  // Getter for motor
-  get motor() {
-    return this._motor;
+  set range(value) {
+    this._range = value;
   }
 
-  // Getter for color
-  get color() {
-    return this._color;
-  }
-
-  // Method to clone the car
   cloneCar() {
-    const { brand, motor, color } = this;
-    return new Car(brand, motor, color);
+    const Species = super.constructor[Symbol.species];
+
+    return new Species();
   }
 }
-
-export default Car;
