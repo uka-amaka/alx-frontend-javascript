@@ -1,6 +1,5 @@
 # ALX Backend JavaScript
 
-![Repo size](https://img.shields.io/github/repo-size/uka-amaka/alx-backend-javascript)
-![Latest commit](https://img.shields.io/github/last-commit/uka-amaka/alx-backend-javascript/master?style=round-square)
+![Latest commit](https://github.com/uka-amaka/alx-frontend-javascript))
 
-This repo contains projects for learning back end development concepts with __JavaScript__.
+This repo contains projects for learning back-end development concepts with __JavaScript__.
